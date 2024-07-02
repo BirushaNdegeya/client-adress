@@ -1,4 +1,4 @@
-import app from "./server.js";
+import app from './src/server.js';
 import dotenv from 'dotenv';
 
 
