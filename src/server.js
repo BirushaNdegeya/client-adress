@@ -7,7 +7,9 @@ app.use(express.json());
 app.use('/api/hello', helloRoute);
 
 app.use('*', function (req, res) {
-   res.status(404).json({ errror: 'not found' });
+   res.json({
+      message: "add this to your url - /api/hello?visitor_name=Birusha"
+   });
 });
 
 export default app;

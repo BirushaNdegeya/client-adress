@@ -3,15 +3,9 @@ import dotenv from 'dotenv';
 
 
 // hello api
-/*
-{
-  "client_ip": "127.0.0.1", // The IP address of the requester
-  "location": "New York" // The city of the requester
-  "greeting": "Hello, Mark!, the temperature is 11 degrees Celcius in New York"
-}
-*/
 
 dotenv.config();
+
 export async function hello(req, res) {
    try {
       const visitorName = req.query.visitor_name;
