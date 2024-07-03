@@ -23,12 +23,12 @@ export async function hello(req, res) {
          `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
       );
       const temperature = weatherResponse.data.main.temp;
-      res.status().json({
+      res.status(200).json({
          client_ip: clientIp,
          location: city,
          greeting: `Hello, ${visitorName}!, the temperature is ${temperature} degrees Celsius in ${city}`,
       });
    } catch (error) {
-      res.json({ error: error.message });
+      res.status(500).json({ error: error.message });
    }
 }
