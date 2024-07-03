@@ -18,7 +18,7 @@ export async function hello(req, res) {
 
       const response = await axios.get(`http://ip-api.com/json/${clientIp}`);
       const { city } = response.data || "new york";
-      const API_KEY = process.env.OPEN_WEATHER_API_KEY;
+      const API_KEY = 'f9d6c9cb16f6c7979edf91d6b2e17d4e';
       const weatherResponse = await axios.get(
          `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`
       );
