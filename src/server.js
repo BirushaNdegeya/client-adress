@@ -7,7 +7,7 @@ app.use(express.json());
 app.use('/api/hello', helloRoute);
 
 app.use('*', function (req, res) {
-   res.json({
+   res.status(200).json({
       message: "add this to your url - /api/hello?visitor_name=Birusha"
    });
 });
