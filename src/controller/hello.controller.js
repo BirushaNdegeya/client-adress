@@ -29,6 +29,6 @@ export async function hello(req, res) {
          greeting: `Hello, ${visitorName}!, the temperature is ${temperature} degrees Celsius in ${city}`,
       });
    } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.json({ error: error.message });
    }
 }
